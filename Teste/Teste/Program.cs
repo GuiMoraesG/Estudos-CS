@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Teste
 {
@@ -10,7 +6,7 @@ namespace Teste
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Morte");
+            Console.WriteLine("Morte"); 
         }
     }
 }
