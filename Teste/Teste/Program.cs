@@ -10,7 +10,7 @@ namespace Teste
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Morte"); 
+            Console.WriteLine("Morte");
         }
     }
 }
