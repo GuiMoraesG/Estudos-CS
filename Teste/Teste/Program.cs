@@ -6,7 +6,8 @@ namespace Teste
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Morte");
+            long n1 = 9998L;
+            Console.WriteLine(n1);
         }
     }
 }
