@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Teste
 {
@@ -6,10 +7,12 @@ namespace Teste
     {
         static void Main(string[] args)
         {
-            bool v = false;
-            Console.WriteLine(v);
-            v = true;
-            Console.WriteLine(v);
+            string nome = "Guilherme";
+            int idade = 23;
+            double jogos = 121.222;
+
+            Console.WriteLine("O {0} tem {1} anos e {2:F} jogos na steam", nome, idade, jogos);
+            Console.WriteLine($"O {nome} tem {idade} anos e {jogos:F} jogos na steam");
         }
     }
 }
