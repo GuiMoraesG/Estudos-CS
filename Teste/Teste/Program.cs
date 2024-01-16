@@ -6,8 +6,10 @@ namespace Teste
     {
         static void Main(string[] args)
         {
-            long n1 = 9998L;
-            Console.WriteLine(n1);
+            bool v = false;
+            Console.WriteLine(v);
+            v = true;
+            Console.WriteLine(v);
         }
     }
 }
