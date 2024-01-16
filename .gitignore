@@ -2,8 +2,7 @@
 Teste/.vs/Teste/FileContentIndex/0e2a8e27-d073-4ec4-8ece-5cec7c0cf4b9.vsidx
 *.vsidx
 *.pdb
-Teste/.vs/Teste/v17/.suo
-Teste/.vs/Teste/v17/.suo
+*.suo
 *.exe
 *.config
 *.cache
