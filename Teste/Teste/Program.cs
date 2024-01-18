@@ -7,12 +7,26 @@ namespace Teste
     {
         static void Main(string[] args)
         {
-            string nome = "Guilherme";
-            int idade = 23;
-            double jogos = 121.222;
+            int n1 = int.Parse(Console.ReadLine());
+            char x = char.Parse(Console.ReadLine());
+            float n2 = float.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine("O {0} tem {1} anos e {2:F2} jogos na steam", nome, idade, jogos);
-            Console.WriteLine($"O {nome} tem {idade} anos e {jogos:F1} jogos na steam");
+            string dados = Console.ReadLine();
+            string[] dadosLista = dados.Split(' ');
+
+            string nome = dadosLista[0];
+            int idade = int.Parse(dadosLista[1]);
+            char gen = char.Parse(dadosLista[2]);
+            float altura = float.Parse(dadosLista[3], CultureInfo.InvariantCulture);
+
+            Console.WriteLine(n1);
+            Console.WriteLine(x);
+            Console.WriteLine(n2);
+
+            Console.WriteLine(nome);
+            Console.WriteLine(idade);
+            Console.WriteLine(gen);
+            Console.WriteLine(altura.ToString("F2"));
         }
     }
 }
