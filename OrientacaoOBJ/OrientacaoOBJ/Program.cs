@@ -17,7 +17,7 @@ namespace OrientacaoOBJ
             x.B = double.Parse(Console.ReadLine());
             x.C = double.Parse(Console.ReadLine());
 
-            areaX = (x.A + x.B + x.C) / 2;
+            areaX = x.Area();
 
             Console.WriteLine("Digite os valores do triangulo Y: ");
 
@@ -25,7 +25,7 @@ namespace OrientacaoOBJ
             y.B = double.Parse(Console.ReadLine());
             y.C = double.Parse(Console.ReadLine());
 
-            areaY = (y.A + y.B + y.C) / 2;
+            areaY = y.Area();
 
             Console.WriteLine($"A area de X é {areaX.ToString("F2")}");
             Console.WriteLine($"A area de Y é {areaY.ToString("F2")}");
