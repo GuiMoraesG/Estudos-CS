@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace POO_Exercicio04
 {
@@ -10,6 +6,23 @@ namespace POO_Exercicio04
     {
         static void Main(string[] args)
         {
+            double porcent;
+            double salarioLiquido;
+            Funcionario funcionario = new Funcionario();
+            Console.WriteLine("Digite os dados do Funcionario: ");
+
+            funcionario.Nome = Console.ReadLine();
+            funcionario.Salario = double.Parse(Console.ReadLine());
+            funcionario.Imposto = double.Parse(Console.ReadLine());
+
+            salarioLiquido = funcionario.SalarioLiquido();
+            Console.WriteLine("Funcionario: " + salarioLiquido);
+
+            Console.WriteLine("Digite o aumento do Funcionario: ");
+            porcent = double.Parse(Console.ReadLine());
+
+            funcionario.SalarioAumento(porcent);
+            Console.WriteLine("Dados atualizados: " + funcionario);
         }
     }
 }
