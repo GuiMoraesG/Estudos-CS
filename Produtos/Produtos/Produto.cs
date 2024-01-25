@@ -13,16 +13,19 @@ namespace Produtos
             return Preco * Estoque;
         }
 
+        public override string ToString()
+        {
+            return $"Dados do Produto: Nome: {Nome}, R$: {Preco.ToString("F2")}, Quantidade {Estoque}. Total: R$ {ValorTotalEmEstoque().ToString("F2")}";
+        }
+
         public void AdicionarProdutos(int Quant)
         {
             Estoque += Quant;
-            Console.WriteLine($"Dados do Produto: Nome: {Nome}, R$: {Preco.ToString("F2")}, Quantidade {Estoque}. Total: R$ {ValorTotalEmEstoque().ToString("F2")}");
         }
 
         public void RemoverProdutos(int Quant)
         {
             Estoque -= Quant;
-            Console.WriteLine($"Dados do Produto: Nome: {Nome}, R$: {Preco.ToString("F2")}, Quantidade {Estoque}. Total: R$ {ValorTotalEmEstoque().ToString("F2")}");
         }
     }
 }
