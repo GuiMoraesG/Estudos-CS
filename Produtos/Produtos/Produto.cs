@@ -18,14 +18,14 @@ namespace Produtos
             return $"Dados do Produto: Nome: {Nome}, R$: {Preco.ToString("F2")}, Quantidade {Estoque}. Total: R$ {ValorTotalEmEstoque().ToString("F2")}";
         }
 
-        public void AdicionarProdutos(int Quant)
+        public void AdicionarProdutos(int quant)
         {
-            Estoque += Quant;
+            Estoque += quant;
         }
 
-        public void RemoverProdutos(int Quant)
+        public void RemoverProdutos(int quant)
         {
-            Estoque -= Quant;
+            Estoque -= quant;
         }
     }
 }
