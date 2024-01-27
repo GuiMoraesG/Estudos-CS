@@ -7,12 +7,13 @@ namespace Produtos
         static void Main(string[] args)
         {
             int quantidade;
-            Produto produto = new Produto();
             Console.WriteLine("Entre com os dados dos Produtos");
 
-            produto.Nome = Console.ReadLine();
-            produto.Preco = double.Parse(Console.ReadLine());
-            produto.Estoque = int.Parse(Console.ReadLine());
+            string nome = Console.ReadLine();
+            double preco = double.Parse(Console.ReadLine());
+            int estoque = int.Parse(Console.ReadLine());
+
+            Produto produto = new Produto(nome, preco, estoque);
 
             Console.WriteLine(produto);
 

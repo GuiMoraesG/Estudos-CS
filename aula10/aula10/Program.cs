@@ -17,12 +17,7 @@ namespace aula10
             Console.WriteLine("Circunferêcia: " + circunferecia.ToString("F2"));
             Console.WriteLine("Volume: " + volume.ToString("F2"));
             Console.WriteLine("Valor do PI: " + circulo.PI.ToString("F2"));
-            oi();
-        }
 
-        static void oi()
-        {
-            Console.WriteLine("oi");
         }
     }
 }

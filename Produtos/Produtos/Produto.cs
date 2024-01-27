@@ -8,6 +8,13 @@ namespace Produtos
         public double Preco;
         public int Estoque;
 
+        public Produto(string nome, double preco, int estoque)
+        {
+            Nome = nome;
+            Preco = preco;
+            Estoque = estoque;
+        }
+
         public double ValorTotalEmEstoque()
         {
             return Preco * Estoque;
