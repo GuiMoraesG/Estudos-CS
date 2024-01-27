@@ -11,13 +11,12 @@ namespace Produtos
 
             string nome = Console.ReadLine();
             double preco = double.Parse(Console.ReadLine());
-            int estoque = int.Parse(Console.ReadLine());
 
-            Produto produto = new Produto(nome, preco, estoque);
+            Produto produto = new Produto(nome, preco);
 
             Console.WriteLine(produto);
 
-            Console.Write("Digite o numero de Produtos a serem adicionados no estoque: ");
+            Console.Write("Digite o numero de Produtos no estoque: ");
             quantidade = int.Parse(Console.ReadLine());
 
             produto.AdicionarProdutos(quantidade);
