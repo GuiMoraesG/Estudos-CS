@@ -3,7 +3,7 @@
     internal class Produto
     {
         private string _nome;
-        public double Preco { get; set; }
+        public double Preco { get; private set; }
         public int Estoque { get; private set; }
 
         public Produto()
