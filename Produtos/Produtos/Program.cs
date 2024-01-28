@@ -15,12 +15,10 @@ namespace Produtos
 
             Produto produto = new Produto(nome, preco, estoque);
 
-            produto.SetNome("V");
-            Console.WriteLine(produto.GetNome());
-
+            Console.WriteLine(produto.Nome);
+            Console.WriteLine(produto.Preco);
+            Console.WriteLine(produto.Estoque);
             /*
-            Console.WriteLine(produto);
-
             Console.Write("Digite o numero de Produtos no estoque: ");
             quantidade = int.Parse(Console.ReadLine());
 

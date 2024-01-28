@@ -16,17 +16,27 @@
             _estoque = estoque;
         }
 
-        public string GetNome()
+        public string Nome
         {
-            return _nome;
+            get
+            { return _nome; }
+            set
+            {
+                if (value.Length > 1)
+                {
+                    _nome = value;
+                }
+            }
         }
 
-        public void SetNome(string nome)
+        public double Preco
         {
-            if (nome != null && nome.Length > 1)
-            {
-                _nome = nome;
-            }
+            get { return _preco; }
+        }
+
+        public int Estoque
+        {
+            get { return _estoque; }
         }
 
         public double ValorTotalEmEstoque()
