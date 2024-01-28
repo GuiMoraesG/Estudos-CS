@@ -1,44 +1,52 @@
-﻿using System;
-
-namespace Produtos
+﻿namespace Produtos
 {
     internal class Produto
     {
-        public string Nome;
-        public double Preco;
-        public int Estoque;
+        private string _nome;
+        private double _preco;
+        private int _estoque;
+
+        public Produto()
+        { }
 
         public Produto(string nome, double preco, int estoque)
         {
-            Nome = nome;
-            Preco = preco;
-            Estoque = estoque;
+            _nome = nome;
+            _preco = preco;
+            _estoque = estoque;
         }
 
-        public Produto(string nome, double preco)
+        public string GetNome()
         {
-            Nome = nome;
-            Preco = preco;
+            return _nome;
+        }
+
+        public void SetNome(string nome)
+        {
+            if (nome != null && nome.Length > 1)
+            {
+                _nome = nome;
+            }
         }
 
         public double ValorTotalEmEstoque()
         {
-            return Preco * Estoque;
+            return _preco * _estoque;
         }
 
         public override string ToString()
         {
-            return $"Dados do Produto: Nome: {Nome}, R$: {Preco.ToString("F2")}, Quantidade {Estoque}. Total: R$ {ValorTotalEmEstoque().ToString("F2")}";
+            return $"Dados do Produto: Nome: {_nome}, R$: {_preco.ToString("F2")}, Quantidade {_estoque}. Total: R$ {ValorTotalEmEstoque().ToString("F2")}";
         }
 
         public void AdicionarProdutos(int quant)
         {
-            Estoque += quant;
+            _estoque += quant;
         }
 
         public void RemoverProdutos(int quant)
         {
-            Estoque -= quant;
+            _estoque -= quant;
         }
     }
 }
