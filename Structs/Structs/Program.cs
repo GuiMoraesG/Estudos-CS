@@ -6,7 +6,7 @@ namespace Structs
     {
         static void Main(string[] args)
         {
-            double? x = 2;
+            double? x = null;
             double? y = 10.3;
             double z = x ?? 0.0;
 
