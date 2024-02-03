@@ -4,16 +4,9 @@ namespace Vetores3
 {
     internal class Calc
     {
-        public static int Sum(params int[] numbers)
+        public static void Triple(ref int x)
         {
-            int sum = 0;
-
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                sum += numbers[i];
-            }
-
-            return sum;
+            x = x * 3;
         }
     }
 }

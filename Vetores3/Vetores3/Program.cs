@@ -6,9 +6,10 @@ namespace Vetores3
     {
         static void Main(string[] args)
         {
-            int result = Calc.Sum(10, 10, 10);
+            int a = 10;
 
-            Console.WriteLine(result);
+            Calc.Triple(ref a);
+            Console.WriteLine(a);
         }
     }
 }
