@@ -6,20 +6,20 @@ namespace Structs
     {
         static void Main(string[] args)
         {
-            int num;
-            Point p = new Point();
-            Point t;
-            t = p;
+            double? x = 2;
+            double? y = 10.3;
+            double z = x ?? 0.0;
 
-            t.x = 100;
-            t.y = 200;
+            Console.WriteLine(x.GetValueOrDefault());
+            Console.WriteLine(y.GetValueOrDefault());
 
-            Console.WriteLine(p);
+            Console.WriteLine(x.HasValue);
+            Console.WriteLine(y.HasValue);
 
-            p.x = 10;
-            p.y = 20;
+            //Console.WriteLine(x.Value);
+            Console.WriteLine(y.Value);
 
-            Console.WriteLine(num);
+            Console.WriteLine(z);
         }
     }
 }
