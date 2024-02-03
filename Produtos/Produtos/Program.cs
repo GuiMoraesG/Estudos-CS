@@ -15,8 +15,9 @@ namespace Produtos
 
             Produto produto = new Produto(nome, preco, estoque);
 
-            Console.WriteLine(produto);
+            Console.WriteLine(produto.Nome);
 
+            /*
             Console.Write("Digite o numero de Produtos no estoque: ");
             quantidade = int.Parse(Console.ReadLine());
 
@@ -27,7 +28,7 @@ namespace Produtos
             quantidade = int.Parse(Console.ReadLine());
 
             produto.RemoverProdutos(quantidade);
-            Console.WriteLine(produto);
+            Console.WriteLine(produto); */
         }
     }
 }
