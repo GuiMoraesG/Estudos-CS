@@ -45,7 +45,7 @@ namespace Listas
             Console.WriteLine("'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''");
 
             list.Remove("Alex");
-            //list.RemoveAll(x => x[0] == 'D');
+            list.RemoveAll(x => x[0] == 'D');
             list.RemoveAt(2);
 
             foreach (string item in list)
