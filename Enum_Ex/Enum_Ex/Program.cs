@@ -13,7 +13,7 @@ namespace Enum_Ex
 
             Console.WriteLine("Enter worker data: ");
 
-            Console.Write("Name");
+            Console.Write("Name: ");
             string name = Console.ReadLine();
 
             Console.Write("Level (Junior/MidLevel/Senior): ");
@@ -51,8 +51,8 @@ namespace Enum_Ex
             int month = int.Parse(monthYear.Substring(0, 2));
             int year = int.Parse(monthYear.Substring(3));
 
-            Console.Write($"Name: {worker.Name}");
-            Console.Write($"Department: {worker.Department.Name}");
+            Console.WriteLine($"Name: {worker.Name}");
+            Console.WriteLine($"Department: {worker.Department.Name}");
             Console.WriteLine($"Income for {monthYear}: {worker.Income(year, month)}");
 
         }
