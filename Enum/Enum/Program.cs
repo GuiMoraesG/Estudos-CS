@@ -15,7 +15,7 @@ namespace Enum
                 Status = OrderStatus.PendingPayment
             };
 
-            Console.WriteLine(order.Moment.GetType());
+            Console.WriteLine(order.Id);
         }
     }
 }
