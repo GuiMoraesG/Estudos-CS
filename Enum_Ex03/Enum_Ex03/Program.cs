@@ -55,7 +55,7 @@ namespace Enum_Ex03
 
             Console.WriteLine($"Order Moment: {order.Moment}");
             Console.WriteLine($"Order Status: {order.Status}");
-            Console.WriteLine($"Client: {client.Name} {client.BirthDate} - {client.Email}");
+            Console.WriteLine($"Client: {client.Name} {client.BirthDate.Year} - {client.Email}");
 
             Console.WriteLine("ORDER ITEMS: ");
             
