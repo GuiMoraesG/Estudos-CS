@@ -1,0 +1,44 @@
+﻿using Enum_Ex03.Entities.Enum;
+using System;
+using System.Collections.Generic;
+
+namespace Enum_Ex03.Entities
+{
+    internal class Order
+    {
+        public DateTime Moment {  get; set; }
+        public OrderStatus Status { get; set; }
+        public Client Client { get; set; }
+        public List<OrderItem> Item = new List<OrderItem>();
+
+        public Order() { }
+
+        public Order(DateTime moment, OrderStatus status, Client client)
+        {
+            Moment = moment;
+            Status = status;
+            Client = client;
+        }
+
+        public void addItem(OrderItem item)
+        {
+            Item.Add(item);
+        }
+
+        public void removeItem(OrderItem item) 
+        { 
+            Item.Remove(item);
+        }
+
+        public double Total()
+        {
+            double total = 0;
+            foreach (OrderItem item in Item) 
+            {
+                total += item.SubTotal();
+            }
+
+            return total;
+        }
+    }
+}
