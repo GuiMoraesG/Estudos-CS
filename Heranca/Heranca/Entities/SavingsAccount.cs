@@ -15,5 +15,11 @@
         {
             Balance += Balance * InterestRate;
         }
+
+        public override void withdraw(double amount)
+        {
+            base.withdraw(amount);
+            Balance -= 2.0;
+        }
     }
 }

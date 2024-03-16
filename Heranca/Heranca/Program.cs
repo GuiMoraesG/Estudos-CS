@@ -7,12 +7,15 @@ namespace Heranca
     {
         static void Main(string[] args)
         {
-            Account account = new Account(1001, "Alex", 0.0);
-            BusinessAccount businessAccount = new BusinessAccount(1002, "Maria", 0.0, 500.0);
+            Account acc1 = new Account(1001, "Agui", 500.0);
+            Account acc2 = new SavingsAccount(1002, "Anna", 500.0, 0.01);
 
-            Account account1 = businessAccount;
+            acc1.withdraw(10.0);
+            acc2.withdraw(10.0);
 
-            Console.WriteLine(account1);
+            Console.WriteLine(acc1.Balance);
+            Console.WriteLine(acc2.Balance);
         }
+
     }
 }
