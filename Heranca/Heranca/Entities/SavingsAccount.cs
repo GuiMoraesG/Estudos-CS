@@ -1,6 +1,6 @@
 ﻿namespace Heranca.Entities
 {
-    internal class SavingsAccount : Account
+    internal sealed class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
@@ -16,7 +16,7 @@
             Balance += Balance * InterestRate;
         }
 
-        public override void withdraw(double amount)
+        public sealed override void withdraw(double amount)
         {
             base.withdraw(amount);
             Balance -= 2.0;
