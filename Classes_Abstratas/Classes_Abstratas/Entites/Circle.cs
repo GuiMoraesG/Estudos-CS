@@ -13,7 +13,7 @@ namespace Classes_Abstratas.Entites
 
         public override double Area()
         {
-            return Math.PI + Radius * Radius;
+            return Math.PI * Radius * Radius;
         }
     }
 }
