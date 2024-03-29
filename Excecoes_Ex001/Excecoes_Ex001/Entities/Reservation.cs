@@ -1,4 +1,5 @@
 ﻿using System;
+using Excecoes_Ex001.Entities.Exceptions;
 
 namespace Excecoes_Ex001.Entities
 {
@@ -11,6 +12,11 @@ namespace Excecoes_Ex001.Entities
         public Reservation() { }
         public Reservation(int roomNumber, DateTime checkin, DateTime checkout)
         {
+            if (checkin >= checkout)
+            {
+                throw new DomainException("Error, invalid data");
+            }
+
             RoomNumber = roomNumber;
             Checkin = checkin;
             Checkout = checkout;
@@ -27,24 +33,22 @@ namespace Excecoes_Ex001.Entities
             return $"Room {RoomNumber}, Check-in: {Checkin.ToString("dd/MM/yyyy")}, Check-out: {Checkout.ToString("dd/MM/yyyy")}, {Duration()} nights";
         }
 
-        public string UpdateDates(DateTime checkin, DateTime checkout)
+        public void UpdateDates(DateTime checkin, DateTime checkout)
         {
             DateTime now = DateTime.Now;
 
             if (checkin < now || checkout < now)
             {
-                return "Error, invalid data";
+                throw new DomainException("Error, invalid data");
             }
 
             if (checkin >= checkout)
             {
-                return "Error, invalid data";
+                throw new DomainException("Error, invalid data");
             }
 
             Checkin = checkin;
             Checkout = checkout;
-
-            return null;
         }
     }
 }
