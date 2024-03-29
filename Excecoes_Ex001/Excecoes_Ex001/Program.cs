@@ -33,15 +33,11 @@ namespace Excecoes_Ex001
                 Console.Write("Check-out date (dd/MM/yyyy): ");
                 checkout = DateTime.Parse(Console.ReadLine());
 
-                DateTime now = DateTime.Now;
+                string errors = reservation.UpdateDates(checkin, checkout);
 
-                if (checkin < now || checkout < now)
+                if (errors != null)
                 {
-                    Console.WriteLine("Error, invalid data");
-                }
-                else if (checkin >= checkout)
-                {
-                    Console.WriteLine("Error, invalid data");
+                    Console.WriteLine(errors);
                 }
                 else
                 {

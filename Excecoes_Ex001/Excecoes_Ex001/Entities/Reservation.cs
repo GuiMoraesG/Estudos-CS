@@ -27,10 +27,24 @@ namespace Excecoes_Ex001.Entities
             return $"Room {RoomNumber}, Check-in: {Checkin.ToString("dd/MM/yyyy")}, Check-out: {Checkout.ToString("dd/MM/yyyy")}, {Duration()} nights";
         }
 
-        public void UpdateDates(DateTime checkin, DateTime checkout)
+        public string UpdateDates(DateTime checkin, DateTime checkout)
         {
+            DateTime now = DateTime.Now;
+
+            if (checkin < now || checkout < now)
+            {
+                return "Error, invalid data";
+            }
+
+            if (checkin >= checkout)
+            {
+                return "Error, invalid data";
+            }
+
             Checkin = checkin;
             Checkout = checkout;
+
+            return null;
         }
     }
 }
