@@ -7,7 +7,7 @@ namespace Bloco
     {
         static void Main(string[] args)
         {
-            string path = @"C:\Teste\teste.txt";
+            string path = @"C:\Teste\teste1.txt";
 
             try
             {
