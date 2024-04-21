@@ -27,6 +27,8 @@ namespace LidandoComPastas
                 {
                     Console.WriteLine(file);
                 }
+
+                Directory.CreateDirectory(path + "\\novoTeste");
             }
             catch (IOException e)
             {
