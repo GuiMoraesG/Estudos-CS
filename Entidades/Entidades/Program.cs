@@ -28,7 +28,7 @@ namespace Entidades
             Console.Write("Enter price per day: ");
             double pricePerDay = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            RentalService rentalService = new RentalService(pricePerHour, pricePerDay);
+            RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxServices());
             rentalService.ProcessInvoice(carRental);
 
             Console.WriteLine("INVOICE: ");

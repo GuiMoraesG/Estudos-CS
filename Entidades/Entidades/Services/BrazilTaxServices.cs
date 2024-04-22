@@ -1,6 +1,6 @@
 ﻿namespace Entidades.Services
 {
-    internal class BrazilTaxServices
+    internal class BrazilTaxServices : ITaxService
     {
         public double Tax(double amount)
         {
