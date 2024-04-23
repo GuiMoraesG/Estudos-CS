@@ -7,18 +7,35 @@ namespace Estudo_HashSet
     {
         static void Main(string[] args)
         {
-            HashSet<string> set = new HashSet<string>();
+            SortedSet<int> a = new SortedSet<int>() { 0, 2, 3, 4, 5, 6, 7, 8, 20 };
+            SortedSet<int> b = new SortedSet<int>() { 0, 2, 32, 41, 54, 65, 7, 82, 20 };
 
-            set.Add("TV");
-            set.Add("PC");
-            set.Add("Tablet");
+            //UNIÃO
+            SortedSet<int> c = new SortedSet<int>(a);
+            c.UnionWith(b);
 
-            Console.WriteLine(set.Contains("Maria"));
+            PrintCollection(c);
 
-            foreach (var item in set)
+            //INTERSECTION
+            SortedSet<int> d = new SortedSet<int>(a);
+            d.IntersectWith(b);
+
+            PrintCollection(d);
+
+            //DIFERENÇA
+            SortedSet<int> e = new SortedSet<int>(a);
+            e.ExceptWith(b);
+
+            PrintCollection(e);
+        }
+
+        static void PrintCollection<T>(IEnumerable<T> collections)
+        {
+            foreach (T obj in collections)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(obj + " ");
             }
+            Console.WriteLine();
         }
     }
 }
