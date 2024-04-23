@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Estudo_HashSet.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace Estudo_HashSet
@@ -7,35 +8,22 @@ namespace Estudo_HashSet
     {
         static void Main(string[] args)
         {
-            SortedSet<int> a = new SortedSet<int>() { 0, 2, 3, 4, 5, 6, 7, 8, 20 };
-            SortedSet<int> b = new SortedSet<int>() { 0, 2, 32, 41, 54, 65, 7, 82, 20 };
+            HashSet<Product> a = new HashSet<Product>();
 
-            //UNIÃO
-            SortedSet<int> c = new SortedSet<int>(a);
-            c.UnionWith(b);
+            a.Add(new Product("TV", 900.0));
+            a.Add(new Product("Celular", 1200.0));
 
-            PrintCollection(c);
+            HashSet<Point> b = new HashSet<Point>();
 
-            //INTERSECTION
-            SortedSet<int> d = new SortedSet<int>(a);
-            d.IntersectWith(b);
+            b.Add(new Point(3, 4));
+            b.Add(new Point(5, 10));
 
-            PrintCollection(d);
+            Product prod = new Product("Celular", 1200.0);
 
-            //DIFERENÇA
-            SortedSet<int> e = new SortedSet<int>(a);
-            e.ExceptWith(b);
+            Console.WriteLine(a.Contains(prod));
 
-            PrintCollection(e);
-        }
-
-        static void PrintCollection<T>(IEnumerable<T> collections)
-        {
-            foreach (T obj in collections)
-            {
-                Console.WriteLine(obj + " ");
-            }
-            Console.WriteLine();
+            Point p = new Point(5, 10);
+            Console.WriteLine(b.Contains(p));
         }
     }
 }
