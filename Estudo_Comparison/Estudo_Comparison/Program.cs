@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using Estudo_Comparison.Entities;
 
@@ -17,19 +18,19 @@ namespace Estudo_Comparison
             list.Add(new Product("Celular", 1200));
             list.Add(new Product("Mouse", 80));
 
-            Action<Product> act = p => { p.Price += p.Price * 0.1; };
+            Func<Product, string> func = p => p.Name.ToUpper();
 
-            list.ForEach(act);
+            List<string> result = list.Select(func).ToList();
 
-            foreach (Product product in list)
+            foreach (string product in result)
             {
                 Console.WriteLine(product);
             }
         }
 
-        public static void Increse(Product p)
+        public static string NameUpper(Product p)
         {
-            p.Price += p.Price * 0.1;
+            return p.Name.ToUpper();
         }
     }
 }
