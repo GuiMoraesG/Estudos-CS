@@ -1,27 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using Estudo_Comparison.Entities;
+using Estudo_Comparison.Service;
 
 namespace Estudo_Comparison
 {
     internal class Program
     {
+        delegate double BinaryNumericOperation(double n1, double n2);
+
         static void Main(string[] args)
         {
-            List<Product> list = new List<Product>();
+            double a = 4;
+            double b = 5;
 
-            list.Add(new Product("TV", 900));
-            list.Add(new Product("Celular", 1200));
-            list.Add(new Product("Tablet", 400));
+            BinaryNumericOperation op = CalculationService.Sum;
+            double result = op(a, b);
 
-            Comparison<Product> comp = (p1,p2) => p1.Name.ToUpper().CompareTo(p2.Name.ToUpper());
-
-            list.Sort(comp);
-
-            foreach (Product p in list) 
-            {
-                Console.WriteLine(p);
-            }
+            Console.WriteLine(result);
         }
     }
 }
