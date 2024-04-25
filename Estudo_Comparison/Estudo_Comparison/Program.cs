@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using Estudo_Comparison.Entities;
-using Estudo_Comparison.Service;
 
 namespace Estudo_Comparison
 {
@@ -10,13 +10,24 @@ namespace Estudo_Comparison
 
         static void Main(string[] args)
         {
-            double a = 4;
-            double b = 5;
+            List<Product> list = new List<Product>();
 
-            BinaryNumericOperation op = CalculationService.Sum;
-            double result = op(a, b);
+            list.Add(new Product("TV", 900));
+            list.Add(new Product("Tablet", 40));
+            list.Add(new Product("Celular", 1200));
+            list.Add(new Product("Mouse", 80));
 
-            Console.WriteLine(result);
+            list.RemoveAll(ProductTest);
+
+            foreach (Product product in list)
+            {
+                Console.WriteLine(product);
+            }
+        }
+
+        public static bool ProductTest(Product p)
+        {
+            return p.Price >= 100;
         }
     }
 }
