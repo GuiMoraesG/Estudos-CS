@@ -17,7 +17,9 @@ namespace Estudo_Comparison
             list.Add(new Product("Celular", 1200));
             list.Add(new Product("Mouse", 80));
 
-            list.RemoveAll(ProductTest);
+            Action<Product> act = p => { p.Price += p.Price * 0.1; };
+
+            list.ForEach(act);
 
             foreach (Product product in list)
             {
@@ -25,9 +27,9 @@ namespace Estudo_Comparison
             }
         }
 
-        public static bool ProductTest(Product p)
+        public static void Increse(Product p)
         {
-            return p.Price >= 100;
+            p.Price += p.Price * 0.1;
         }
     }
 }
