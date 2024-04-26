@@ -56,7 +56,17 @@ namespace Estudo_LINQ_Lambda
             var r6 = products.First();
             Console.WriteLine("First: " + r6);
 
+            var r7 = products.Max(p => p.Price);
+            Console.WriteLine("MAX PRICE: " + r7);
 
+            var r8 = products.Min(p => p.Price);
+            Console.WriteLine("MIN PRICE: " + r8);
+
+            var r9 = products.Where(p => p.Category.Id == 1).Sum(p => p.Price);
+            Console.WriteLine("SUM: " + r9);
+
+            var r10 = products.Where(p => p.Category.Id == 1).Select(p => p.Price).Aggregate((x, y) => x + y);
+            Console.WriteLine("Aggregate:" + r10);
         }
     }
 }
